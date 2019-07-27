@@ -1,5 +1,7 @@
 import requests
 
+from extractvacancy.models import Vacancy
+
 
 def send_request(url, params):
     """
@@ -57,10 +59,47 @@ def download_all_available_pages(url, params):
     response_json = first_response.json()
     number_of_vacancies = int(response_json['meta']['total'])
     if number_of_vacancies < 10000:
-        total_number_of_pages = number_of_vacancies//LIMIT
+        total_number_of_pages = number_of_vacancies // LIMIT
     all_vacancies += response_json['results']['vacancies']
     for i in range(1, total_number_of_pages):
         print(i)
         local_params['offset'] = i
         all_vacancies += download_vacancy_one_page(url, local_params)
     return all_vacancies
+
+
+def parse_vacancy(vacancy):
+    """
+
+    :param vacancy:
+    :type vacancy: dict
+    :return: Dict with parsed vacancy
+    :rtype: dict
+    """
+    vacancy_dict = vacancy['vacancy']
+    parsed_vacancy = dict()
+    parameters = [
+        ('site_id', 'id'),
+        ('name', 'job-name'),
+        ('salary_min', 'salary_min'),
+        ('salary_max', 'salary_max'),
+        ('employment', 'employment'),
+        ('duty', 'duty'),
+    ]
+
+    for model_parameter_name, api_parameter_name in parameters:
+        parsed_vacancy[model_parameter_name] = vacancy_dict.get(api_parameter_name, None)
+
+    requirement = vacancy_dict.get('requirement', None)
+    parsed_vacancy['specialisation'] = None
+    parsed_vacancy['qualification'] = None
+    if requirement is not None:
+        parsed_vacancy['qualification'] = requirement.get('qualification')
+    category = requirement.get('category')
+    if category is not None:
+        parsed_vacancy['specialisation'] = requirement.get('specialisation')
+
+    return parsed_vacancy
+
+
+
