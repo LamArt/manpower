@@ -101,4 +101,3 @@ def parse_vacancy(vacancy):
     return parsed_vacancy
 
 
-
