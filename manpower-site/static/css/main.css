@@ -36,7 +36,6 @@
 .form-control:focus {
     border-radius: 0;
     border-color: #0061D9;
-
 }
 
 .header-text {
@@ -53,3 +52,10 @@
     color: white;
     font-size: 16pt;
 }
+
+.btn-primary {
+    background-color: #0061D9;
+    color: white;
+    border-radius: 0;
+}
+
