@@ -3,48 +3,39 @@
   src: local('PtRootUi'),
        url('../fonts/PTRootUI_Regular.ttf') format("truetype");
 }
-
 @font-face {
   font-family: 'PT Root UI Bold';
   src: local('PtRootUiBold'),
        url('../fonts/PTRootUI_Bold.ttf') format("truetype");
 }
-
 .background-blue {
     background-color: #0061A9;
 }
-
 .gov-text {
     font-family: "PT Root UI Bold", serif;
     color: black;
     font-size: 14pt;
 }
-
 .empty-row-small {
     height: 5vh;
 }
-
 .form-control {
     border-radius: 0;
     border-color: #0061D9;
 }
-
 .container{
     max-width:1024px;
 }
-
 .form-control:focus {
     border-radius: 0;
     border-color: #0061D9;
 }
-
 .header-text {
     margin-top: 5px;
     font-family: "PT Root UI", serif;
     color: white;
     font-size: 16pt;
 }
-
 .header-text-bold {
     margin-top: 5px;
     margin-left: 10px;
@@ -52,10 +43,8 @@
     color: white;
     font-size: 16pt;
 }
-
 .btn-primary {
     background-color: #0061D9;
     color: white;
     border-radius: 0;
 }
-
