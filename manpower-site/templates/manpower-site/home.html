@@ -1,10 +1,40 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+  <head>
+      <link rel="stylesheet" type="text/css" href="../../static/css/main.css"/>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="background-blue">
+            <div class="row" style="vertical-align: middle">
+                <div class="col-md-6" style="text-align: center">
+                    <p class="header-text"> Поиск </p>
+                </div>
+                <div class="col-md-6" style="text-align: center">
+                    <p class="header-text"> Общая аналитика </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="empty-row-small"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+            <label class="gov-text" for="search">Выберите направление обучения</label>
+            <select id="search" class="form-control">
+                  <option>Информационные направления</option>
+                  <option>Дизайнерские нарпавления</option>
+                  <option>Менеджерские нправления</option>
+            </select>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
