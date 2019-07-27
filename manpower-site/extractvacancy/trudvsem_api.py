@@ -89,15 +89,14 @@ def parse_vacancy(vacancy):
 
     for model_parameter_name, api_parameter_name in parameters:
         parsed_vacancy[model_parameter_name] = vacancy_dict.get(api_parameter_name, None)
-
     requirement = vacancy_dict.get('requirement', None)
     parsed_vacancy['specialisation'] = None
     parsed_vacancy['qualification'] = None
     if requirement is not None:
         parsed_vacancy['qualification'] = requirement.get('qualification')
-    category = requirement.get('category')
+    category = vacancy_dict.get('category', None)
     if category is not None:
-        parsed_vacancy['specialisation'] = requirement.get('specialisation')
+        parsed_vacancy['specialisation'] = category.get('specialisation')
 
     return parsed_vacancy
 

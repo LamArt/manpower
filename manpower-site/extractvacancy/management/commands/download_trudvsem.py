@@ -8,11 +8,10 @@ class Command(BaseCommand):
     help = "Download IT vacancies from trudvsem"
 
     def handle(self, *args, **kwargs):
-        url = 'http://opendata.trudvsem.ru/api/v1/vacancies/region/6600000000000'
+        url = 'http://opendata.trudvsem.ru/api/v1/vacancies'
         vacancies = download_all_available_pages(url, {})
         for vacancy in vacancies:
             parsed_vacancy = parse_vacancy(vacancy)
-            print(parsed_vacancy)
             if parsed_vacancy['specialisation'] == 'Информационные технологии, телекоммуникации, связь':
                 vacancy_model, created = Vacancy.objects.get_or_create(site_id=parsed_vacancy['site_id'],
                                                                        defaults=parsed_vacancy)
