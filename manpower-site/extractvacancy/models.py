@@ -1,3 +1,6 @@
+import datetime
+
+import django
 from django.db import models
 
 
@@ -11,6 +14,7 @@ class Vacancy(models.Model):
     site_id = models.CharField(max_length=127, null=True, blank=True)
     employment = models.CharField(max_length=1000, null=True, blank=True)
     specialisation = models.CharField(max_length=1000, null=True, blank=True)
+    created_at = models.DateTimeField(default=django.utils.timezone.now)
 
     def __str__(self):
         return '#{id} {name}'.format(id=self.id, name=self.id)
