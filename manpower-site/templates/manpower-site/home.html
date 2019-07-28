@@ -51,9 +51,26 @@
 
             {% if context %}
                 {% for vacancy in context %}
-                    <p class="gov-text"> Название вакансии: {{ vacancy.name }} </p>
                 {% endfor %}
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="gov-text"> Прогнозируемая востребованность: </p>
+                        <img src="{{ vacancy.prediction }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="gov-text"> Средняя зарплата: </p>
+                        <img src="{{ vacancy.middle }}">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="gov-text"> Предложения на рынке: </p>
+                        <img src="{{ vacancy.quanity }}">
+                    </div>
+                </div>
             {% endif %}
+
         </div>
 
 
