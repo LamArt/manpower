@@ -9,9 +9,12 @@
        url('../fonts/PTRootUI_Bold.ttf') format("truetype");
 }
 
+.body-color {
+    background-color: #002683;
+}
+
 .foreground-block {
     padding: 25px;
-    background-color: #002683;
     width: 100%;
     height: 100%;
 }
@@ -76,4 +79,19 @@
     font-family: "PT Root UI Bold", serif;
     color: lightgrey;
     font-size: 18pt;
+}
+
+.background-blue-mobile {
+    background-color: #002683;
+}
+
+@media (max-width: 870px) {
+    .background-blue-mobile {
+        display: None;
+    }
+}
+    @media (max-width: 870px) {
+        .gov-link {
+        display: None;
+    }
 }
