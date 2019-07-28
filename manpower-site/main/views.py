@@ -1,9 +1,15 @@
+from django.contrib.sessions.backends import db
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
+from extractvacancy.models import Vacancy
+
+
 def main(request):
-    return render(request, 'manpower-site/home.html')
+    #CHANGE THE CONTEXT VALUE TO CHANGE THE DATABASE OUTPUT
+    context = Vacancy.objects.all()
+    return render(request, 'manpower-site/home.html', {"context": context})
+
 
 def login(request):
     return render(request, 'manpower-site/login-landing.html')
