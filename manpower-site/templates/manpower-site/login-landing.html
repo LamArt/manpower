@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" type="text/css" href="../../static/css/main.css"/>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <title>Login page</title>
+  </head>
+  <body>
+  <div class="foreground-block">
+    <div class="container">
+        <div class="background-blue">
+            <div class="row" style="vertical-align: middle">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img height="56px" width="56px" src="{% static "media/gerb.svg" %}">
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <h1 class="gov-text-white-bold">ManPower</h1>
+                            </div>
+                            <div class="row">
+                                <p class="gov-text-white">Рейтинг профессий</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="text-align: right">
+                    <a class="gov-link" href="{% url "engine" %}">Войти в личный кабинет</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 justify-content-bottom">
+                    <div class="row">
+                        <p class="gov-text-white-bold">Статистика профессий Свердловской области</p>
+                    </div>
+                    <div class="row">
+                        <p class="gov-text-white">Платформа помогает управленцам быстро и правильно принмиать решения.
+                            Отвечает на вопрос какие профессии востребованы и нуждаются в увеличении численности квалифицированных специалистов</p>
+                    </div>
+                    <div class="row">
+                        <a href="{% url "engine" %}" class="btn btn-danger">Перейти к движку</a>
+                    </div>
+                </div>
+                <div class="col-md-4" style="text-align: right">
+                    <img src="{% static "media/graph.svg" %}">
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
