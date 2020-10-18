@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'PT Root UI';
+  src: local('PtRootUi'),
+       url('../fonts/PTRootUI_Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'PT Root UI Bold';
+  src: local('PtRootUiBold'),
+       url('../fonts/PTRootUI_Bold.ttf') format("truetype");
+}
+
+.body-color {
+    background-color: #002683;
+}
+
+.foreground-block {
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.background-blue {
+    background-color: #002683;
+}
+.gov-text {
+    font-family: "PT Root UI Bold", serif;
+    color: black;
+    font-size: 14pt;
+}
+.empty-row-small {
+    height: 5vh;
+}
+.form-control {
+    border-radius: 0;
+    border-color: #0061D9;
+}
+.container{
+    max-width:1024px;
+}
+.form-control:focus {
+    border-radius: 0;
+    border-color: #0061D9;
+}
+.header-text {
+    margin-top: 5px;
+    font-family: "PT Root UI", serif;
+    color: white;
+    font-size: 16pt;
+}
+.header-text-bold {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: "PT Root UI Bold", serif;
+    color: white;
+    font-size: 16pt;
+}
+.btn-primary {
+    background-color: #0061D9;
+    color: white;
+    border-radius: 0;
+}
+
+.gov-text-white {
+    margin-top: 5px;
+    font-family: "PT Root UI", serif;
+    color: white;
+    font-size: 10pt;
+}
+
+.gov-text-white-bold {
+    margin-top: 5px;
+    font-family: "PT Root UI Bold", serif;
+    color: white;
+    font-size: 18pt;
+}
+
+.gov-link {
+    margin-top: 5px;
+    font-family: "PT Root UI Bold", serif;
+    color: lightgrey;
+    font-size: 18pt;
+}
+
+.background-blue-mobile {
+    background-color: #002683;
+}
+
+@media (max-width: 870px) {
+    .background-blue-mobile {
+        display: None;
+    }
+}
+    @media (max-width: 870px) {
+        .gov-link {
+        display: None;
+    }
+}
